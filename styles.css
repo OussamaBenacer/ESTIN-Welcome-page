@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #34495e;
+  --scondary: #e84c3c;
+
+}
+
+html {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  color: var(--primary);
+}
+
+#header {
+  height: max-content;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 20px;  
+  border-bottom: 3px solid var(--scondary);
+  background-color: #efefef;
+}
+
+#nav-bar {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#header input[type="checkbox"] {
+  display: none;
+}
+
+.menu #checked, .menu #non-checked{
+  display: none;
+  font-size: 1.6rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: 350ms ease;
+}
+
+.nav-link {
+  padding: 5px 15px;
+  margin: 0 5px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.nav-link:first-child {
+  font-weight: 900;
+}
+
+.nav-link:hover{
+  background-color: var(--primary);
+  color: white;
+}
+
+#header-img {
+  width: 100px;
+}
+
+main {
+  width: clamp(300px, 80%, 1100px);
+  margin: 0 auto;
+}
+
+section {
+  padding-top: 100px;
+}
+
+main > section:not(:last-of-type) {
+  margin-bottom: -20px;
+}
+
+
+h1, h2, p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+section > p {
+  margin-bottom: 60px;
+}
+
+#email {
+  width: 80%;
+  height: 35px;
+  padding-left: 20px;
+  font-size: 1rem;
+}
+
+
+#email:focus {
+  outline-color: var(--primary);
+}
+
+#submit {
+  height: 35px;
+  width: 17%;
+  text-transform: capitalize;
+  border-radius: 4px;
+  background-color: var(--primary);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  transition: 350ms ease;
+}
+
+#submit:hover {
+  background-color: var(--scondary)
+
+}
+
+#form {
+  display: flex;
+  justify-content: space-between;
+  width: max(70%, 300px);
+  margin: auto auto 50px;
+}
+
+iframe {
+  display: block;
+  width: max(90%, 300px);
+  margin: auto;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 6px;
+}
+
+.training-container {
+  height: 100px;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.training-container .line-center{
+  position: absolute;
+  top: 49%;
+  left: 10%;
+  width: 70%;
+  height: 4px;
+  background-color: var(--primary);
+}
+
+.training-container .line-tlb {
+  position: absolute;
+  right: 20%;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  border: 4px solid;
+  border-right: none;
+}
+
+.disc {
+  position: absolute;
+  top: calc(50% - 7.5px) ;
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.cycle p {
+  position: absolute;
+  top: 70px;
+  transform: translateX(-45%);
+}
+
+.cycle .left :where(.disc, p) {
+  left: calc(10% - 2px)
+}
+
+.cycle .center :where(.disc, p) {
+  left: 30%;
+}
+
+.cycle .right :where(.disc, p) {
+  left: 50%;
+}
+
+.speciality p {
+  position: absolute;
+  text-align: left;
+  right: 0;
+  width: 18%;
+  line-height: 1.2;
+}
+
+.speciality p:nth-child(1) {
+  top: -9px;
+}
+
+.speciality p:nth-child(2) {
+  top: 38px;
+}
+
+.speciality p:nth-child(3) {
+  top: 88px;
+}
+
+#foot {
+  background-color: var(--primary);
+  color: white;
+}
+
+#foot address {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: clamp(300px, 80%, 1100px);
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+
+}
+ 
+#foot address a:hover {
+  color: var(--scondary);
+}
+
+ul.icon-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 32%;
+  min-width: 100px;
+  max-width: 220px;
+}
+
+.email-address {
+  padding-right: 3vw;
+}
+
+
+@media screen and (max-width: 650px) {
+  
+  #foot address {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  ul.icon-links {
+    width: 140px;
+    translate: -5% 0;
+  }
+
+  .email-address {
+    padding-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  
+  #nav-bar {
+    display: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #header .menu #non-checked,
+  #header input[type="checkbox"]:checked + .menu #checked {
+    display: initial;
+  } 
+
+  #header input[type="checkbox"]:checked + .menu #non-checked {
+    display: none;
+  }
+
+  #header input[type="checkbox"]:checked ~ #nav-bar {
+    display: flex;
+  } 
+
+
+  .training-container {
+    width: 200px;
+    height: 350px;
+    margin: auto auto 50px;
+  }
+
+  .training-container .line-center{
+    top: 2%;
+    left: 49%;
+    height: 90%;
+    width: 4px;
+  }
+
+  .training-container .line-tlb {
+    top: 77%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    border-right: 4px solid;
+    border-bottom: none;
+  }
+
+  .disc {
+    left: calc(50% - 7.5px) !important; 
+    transform: translateY(50%);
+    top: 20%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--primary);
+    border-radius: 50%;
+  }
+
+  .cycle .left :where(.disc, p) {
+    top: calc(0% - 2px);
+  }
+
+  .cycle .center :where(.disc, p) {
+    top: 30%;
+  }
+
+  .cycle .right :where(.disc, p) {
+    top: 60%;
+  }
+
+  
+ .training-container .cycle p {
+    left: 13%;
+    transform: translateX(-50%);
+  }
+
+  .training-container .speciality p {
+    text-align: center;
+    top: 95% ;
+    width: unset;
+  }
+
+  .training-container .speciality p:nth-child(1) {
+    right: 85%;
+    width: max-content;
+  }
+
+  .training-container .speciality p:nth-child(2) {
+    right: 50px;
+  }
+
+  .training-container .speciality p:nth-child(3) {
+    right: -13px;
+  }
+
+}

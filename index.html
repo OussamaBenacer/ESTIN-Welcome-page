@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESTIN</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header id="header">
+    <a href="#s1"><img src="https://estin.dz/wp-content/uploads/2022/04/logo-estin.png" alt="logo" width="100px" id="header-img" /></a>
+    <input type="checkbox" id="check-bar" />
+    <div class="menu">
+      <div id="checked"><label for="check-bar"><i class="fa-solid fa-x"></i></label></div>
+      <div id="non-checked"><label for="check-bar"><i class="fa-solid fa-bars"></i></label></div>
+    </div>
+
+    <nav id="nav-bar">
+      <a href="#s1" class="nav-link">Home</a>
+      <a href="#s2" class="nav-link">Training</a>
+      <a href="#foot" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="s1">
+      <h1>Welcome to ESTIN</h1>
+      <p>Ecole Supérieure en Sciences et Technologies de l’Informatique et du Numérique</p>
+      <form action="https://www.freecodecamp.com/email-submit" method="post" id="form" target="_blank">
+        <input type="email" name="email" id="email" required placeholder="Enter your email address" pattern="[a-zA-Z0-9._%+-]+@estin\.dz" title="your email should like : example@estin.dz" />
+        <input type="submit" value="login" id="submit" />
+      </form>
+      <iframe id="video" src="https://www.youtube.com/embed/ywa9wpIIlAo?autoplay=1&mute=1" title="estin digital hub" frameborder="0" allowfullscreen width="500" height="300" loading="lazy"></iframe>
+    </section>
+    <section id="s2">
+      <h2>Training and specialties at ESTIN</h2>
+      <p>Discover the different training courses and specialties at ESTIN</p>
+      <div class="training-container">
+        <div class="lines">
+          <div class="line-tlb"></div>
+          <div class="line-center"></div>
+        </div>
+
+        <div class="cycle">
+          <div class="left">
+            <div class="disc"></div>
+            <p>First cycle</p>
+          </div>
+          <div class="center">
+            <div class="disc"></div>
+            <p>Second cycle</p>
+          </div>
+          <div class="right">
+            <div class="disc"></div>
+            <p>Speciality</p>
+          </div>
+        </div>
+
+        <div class="speciality">
+          <p>AI & DS</p>
+          <p>Cyber Security</p>
+          <p>IOT</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="foot">
+    <address>
+      <a href="mailto:contact@estin.dz" target="_blank">
+        <p class="email-address">contact@estin.dz</p>
+        <a href="tel:+21334824916" target="_blank">
+          <p class="tel-address">+213-34-824-916</p>
+          <ul class="icon-links">
+            <li><a href="https://www.facebook.com/estin.amizour.bejaia/" target="_blank" id="fb"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/estinamizour/" target="_blank" id="insta"><i class="fa-brands fa-instagram"></i></a< /li>
+            <li><a href="https://www.linkedin.com/company/estin-bejaia" target="_blank" id="in"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://www.youtube.com/@estinbejaia" target="_blank" id="ytb"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+    </address>
+  </footer>
+</body>
+
+</html>
